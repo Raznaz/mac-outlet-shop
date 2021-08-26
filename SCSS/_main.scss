@@ -1,0 +1,159 @@
+.products {
+  margin-bottom: 100px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 250px;
+  height: 200px;
+  background-color: #ccc;
+}
+
+.main {
+  width: 870px;
+  height: 400px;
+  background-color: #fff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__item {
+    margin-bottom: 10px;
+    flex-basis: calc(100% / 3 - 20px);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px 1px #ccc;
+
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: 10px;
+  //     right: 10px;
+  //     display: block;
+  //     width: 20px;
+  //     height: 20px;
+  //     background-color: #f00;
+  //   }
+
+  &__content {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__stock {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+
+    color: #767272;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__accept {
+    position: absolute;
+    top: -2px;
+    left: -30px;
+    svg {
+      fill: green;
+    }
+  }
+
+  &__denied {
+    position: absolute;
+    top: -2px;
+    left: -30px;
+    svg {
+      fill: red;
+    }
+  }
+
+  &__price {
+    margin-bottom: 10px;
+
+    color: #767272;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+  }
+}
+
+.reviews {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #dae2ea;
+  &__statistic {
+    margin-left: 30px;
+  }
+  &__proc {
+    margin-bottom: 10px;
+    text-align: left;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__orders {
+    text-align: center;
+    span {
+      display: block;
+    }
+  }
+  &__amount {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+.like {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+  //   width: 20px;
+  //   height: 20px;
+  //   border: 2px solid #000;
+
+  &:hover {
+    cursor: pointer;
+    svg {
+      fill: red;
+    }
+  }
+}
+.heart {
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  svg {
+    fill: red;
+  }
+}
+
+//   background-color: red;
