@@ -1,9 +1,63 @@
 .search {
+  position: relative;
   &__inp {
     width: 100%;
     padding: 20px 40px;
     margin-bottom: 20px;
     font-size: 18px;
     color: #ccc;
+  }
+
+  &__icon-search {
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    // background-color: blue;
+    // border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__icon-filter {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #0e49b5;
+    border-radius: 50%;
+    svg {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon-settings {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: #0e49b5;
+    border-radius: 50%;
+    svg {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
