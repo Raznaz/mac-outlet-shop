@@ -508,15 +508,6 @@ img {
   margin-bottom: 100px;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .sidebar {
   width: 250px;
   height: 200px;
@@ -524,7 +515,7 @@ img {
 }
 
 .main {
-  width: 870px;
+  width: 100%;
   height: 400px;
   background-color: #fff;
 }
@@ -541,12 +532,20 @@ img {
 }
 
 .cards__item {
-  margin-bottom: 10px;
-  -ms-flex-preferred-size: calc(100% / 3 - 20px);
-      flex-basis: calc(100% / 3 - 20px);
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: calc(100% / 4 - 10px);
+      flex-basis: calc(100% / 4 - 10px);
 }
 
 .card {
+  padding-top: 20px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,8 +561,21 @@ img {
           box-shadow: 0 0 10px 1px #ccc;
 }
 
+.card__img {
+  margin-bottom: 15px;
+}
+
+.card__img img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .card__content {
   text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .card__title {
@@ -574,14 +586,27 @@ img {
 }
 
 .card__stock {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 10px;
   color: #767272;
 }
 
 .card__stock span {
   font-weight: 700;
+}
+
+.card__stock img {
+  margin-right: 10px;
+  display: block;
 }
 
 .card__accept {
@@ -598,10 +623,6 @@ img {
   position: absolute;
   top: -2px;
   left: -30px;
-}
-
-.card__denied svg {
-  fill: red;
 }
 
 .card__price {
