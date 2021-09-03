@@ -1,78 +1,3 @@
-const products = [
-  {
-    img: './img/items/prod/1.jpg',
-    title: 'iPhone 11 PRO Max',
-    imgStock: './img/icons/close.svg',
-    stock: 10,
-    price: 19990,
-    rate: 91,
-    orders: 1100,
-  },
-  {
-    img: './img/items/prod/2.jpg',
-    title: 'iPhone 11 PRO Max',
-    imgStock: './img/icons/close.svg',
-    stock: 1,
-    price: 15000,
-    rate: 84,
-    orders: 560,
-  },
-  {
-    img: './img/items/prod/3.jpg',
-    title: 'iPad PRO 13"',
-    imgStock: './img/icons/close.svg',
-    stock: 0,
-    price: 1999,
-    rate: 91,
-    orders: 17100,
-  },
-  {
-    img: './img/items/prod/4.jpg',
-    title: 'iPhone 14 PRO Max',
-    imgStock: './img/icons/close.svg',
-    stock: 4,
-    price: 24999,
-    rate: 91,
-    orders: 1100,
-  },
-  {
-    img: './img/items/prod/5.jpg',
-    title: 'MacBook Air',
-    imgStock: './img/icons/close.svg',
-    stock: 0,
-    price: 21999,
-    rate: 91,
-    orders: 1100,
-  },
-  {
-    img: './img/items/prod/6.jpg',
-    title: 'iPhone XS',
-    imgStock: './img/icons/close.svg',
-    stock: 80,
-    price: 31999,
-    rate: 81,
-    orders: 890,
-  },
-  {
-    img: './img/items/prod/7.jpg',
-    title: 'iPhone XS',
-    imgStock: './img/icons/close.svg',
-    stock: 0,
-    price: 16999,
-    rate: 91,
-    orders: 1230,
-  },
-  {
-    img: './img/items/macbook-pro16.png',
-    title: 'MacBook PRO 16"',
-    imgStock: './img/icons/close.svg',
-    stock: 4,
-    price: 1999,
-    rate: 45,
-    orders: 51100,
-  },
-];
-
 class Card {
   constructor(
     src,
@@ -110,7 +35,7 @@ class Card {
   render() {
     const element = document.createElement('div');
     element.classList.add('cards__item');
-    element.innerHTML = `                                <div class="card">
+    element.innerHTML = `       <div class="card">
                                     <div class="card__img">
                                         <img src=${this.src} alt='iphone'>
                                     </div>
@@ -122,7 +47,6 @@ class Card {
                                         <span>${this.stock}</span> left
                                             in stock
                                         </div>    
-                                        
                                         </div>
                                         <div class="card__price">Price <span>${this.price}$</span></div>
                                         <button class="btn card__btn" type="submit">Add to cart</button>
@@ -139,7 +63,6 @@ class Card {
                                         <span class="heart">
                                         <img src="./img/icons/like_filled.svg" alt="heart"></span>
                                     </div>
-                                    
                                 </div>
                         
     `;
